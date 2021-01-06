@@ -211,9 +211,9 @@ def AskName():
 def SetPlayerName(Ent):
     # Функция устанавливает имя игрока из поля ввода на форме в глобальную переменную  (привязана к кнопке на форме)
     global PlayerName
-    PlayerName = Ent.get().strip().encode("CP1251") # Имя пользователя
+    PlayerName = Ent.get().strip() # Имя пользователя
     if len(PlayerName) == 0 :
-        PlayerName = "Без имени".encode("CP1251")
+        PlayerName = "Без имени"
     Ent.master.destroy() # закрытие окна-родителя
 # =================================================================================================================================================
 def RecWrite(Records44, Records66):
